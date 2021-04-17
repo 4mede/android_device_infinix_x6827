@@ -350,9 +350,8 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm
 
 # Power
-$(call inherit-product, hardware/oplus/power-libperfmgr/power-libperfmgr.mk)
-
 PRODUCT_PACKAGES += \
+    android.hardware.power-service.spaced-libperfmgr \
     android.hardware.power@1.2.vendor \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub
 
