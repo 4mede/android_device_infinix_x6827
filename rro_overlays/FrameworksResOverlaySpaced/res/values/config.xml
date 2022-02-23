@@ -557,6 +557,9 @@
     <!--  Define Google play service package for FRP-->
     <string name="config_persistentDataPackageName">com.google.android.gms</string>
 
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
