@@ -64,7 +64,7 @@ function blob_fixup {
            "${PATCHELF}" --replace-needed "libssl.so" "libssl-v32.so" "${2}"
             ;;
         vendor/lib*/libmtkcam_stdutils.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
         vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc)
             sed -i '/vts/Q' "$2"
@@ -92,6 +92,9 @@ function blob_fixup {
             ;;
         vendor/lib64/libwifi-hal-mtk.so)
             "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
+            ;;
+        vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
     esac
 }
