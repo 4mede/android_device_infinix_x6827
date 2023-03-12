@@ -248,6 +248,11 @@ ro.vendor.mtk_nn_baseline_support=1
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn_quant_preferred=1
 
+# Vibrator
+ro.vendor.vibrator.hal.click.duration=70
+ro.vendor.vibrator.hal.tick.duration=60
+ro.vendor.vibrator.hal.texture_tick.duration=40
+
 # WFD
 ro.vendor.mtk_wfd_support=1
 ro.vendor.wfd.dummy.enable=0
