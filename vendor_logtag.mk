@@ -263,3 +263,4 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.log.tag.GraphicBuffer=$(VENDOR_LOG_LEVEL)
     persist.log.tag.gralloc4=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.MDP=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.mtk_pdc_check_charger=$(VENDOR_LOG_LEVEL)
