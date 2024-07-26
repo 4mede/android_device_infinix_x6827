@@ -324,11 +324,6 @@ property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-#OPLUS_FEATURE_CHG_BASIC
-    on property:sys.usb.config=rndis,adb && property:sys.usb.configfs=1
-    start adbd
-#end OPLUS_FEATURE_CHG_BASIC
-
 on property:sys.usb.config=rndis,adb && property:vendor.usb.acm_cnt=0 && \
 property:sys.usb.configfs=1
     setprop vendor.usb.pid 0x2005
@@ -839,7 +834,7 @@ on property:sys.usb.config=charging_no
     setprop vendor.usb.charging no
 
 on property:vendor.usb.charging=yes
-    write /sys/class/udc/musb-hdrc/device/cmode 0
+    write /sys/class/udc/musb-hdrc/device/cmode 2
 on property:vendor.usb.charging=no
     write /sys/class/udc/musb-hdrc/device/cmode 1
 

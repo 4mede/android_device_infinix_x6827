@@ -60,3 +60,8 @@ on property:sys.boot_completed=1
     write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
     write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
     write /sys/kernel/tracing/instances/mmstat/tracing_on 1
+
+#SPD: modify for swap zram write-back by shuang.zhou at 20201020 start
+on property:sys.boot_completed=1
+    swapon_all /vendor/etc/memfusion2/fstab.enableswap
+#SPD: modify for swap zram write-back by shuang.zhou at 20201020 end
