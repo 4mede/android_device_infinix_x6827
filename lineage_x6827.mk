@@ -14,11 +14,11 @@ $(call inherit-product, device/realme/spaced/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_spaced
-PRODUCT_DEVICE := spaced
-PRODUCT_MANUFACTURER := Realme
-PRODUCT_BRAND := Realme
-PRODUCT_MODEL := Realme 8i
+PRODUCT_NAME := lineage_X6827-OP
+PRODUCT_DEVICE := Infinix-X6827
+PRODUCT_MANUFACTURER := INFINIX
+PRODUCT_BRAND := Infinix
+PRODUCT_MODEL := Infinix X6827
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
