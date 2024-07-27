@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/realme/spaced
+DEVICE_PATH := device/infinix/X6827
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
@@ -36,10 +36,10 @@ ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := RMX3151L1,RMX3286,spaced
+TARGET_OTA_ASSERT_DEVICE := x6827
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := oppo6781
+TARGET_BOOTLOADER_BOARD_NAME := Infinix-X6827
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
@@ -63,14 +63,14 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --board ""
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_spaced
-TARGET_RECOVERY_DEVICE_MODULES := libinit_spaced
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_x6827
+TARGET_RECOVERY_DEVICE_MODULES := libinit_x6827
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/realme/mt6781
-TARGET_KERNEL_CONFIG := spaced_defconfig
+TARGET_KERNEL_SOURCE := kernel/infinix/mt6781
+TARGET_KERNEL_CONFIG := x6827_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r487747
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r487747
@@ -197,4 +197,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit the proprietary files
-include vendor/realme/spaced/BoardConfigVendor.mk
+include vendor/infinix/x6827/BoardConfigVendor.mk
