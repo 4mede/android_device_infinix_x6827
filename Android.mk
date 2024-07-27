@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter spaced, $(TARGET_DEVICE)),)
+ifneq ($(TARGET_DEVICE),X6827)
 
 $(call add-radio-file,dynamic-remove-oppo)
 
