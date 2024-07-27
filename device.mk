@@ -393,16 +393,34 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6781 \
     fstab.mt6781_ramdisk \
-    init.connectivity.rc \
+    factory.init.connectivity.common.rc \
+    factory.init.connectivity.rc \
     init.modem.rc \
     init.mt6781.rc \
     init.mt6781.power.rc \
     init.mt6781.usb.rc \
-    init.project.rc \
+    factory.init.project.rc \
     init.sensor_1_0.rc \
     init.target.rc \
     ueventd.mtk.rc \
-    ueventd.oplus.rc
+    ueventd.oplus.rc \
+    factory.init.rc \
+    fstab.enableswap \
+    init.ago.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.project.rc \
+    init_connectivity.rc \
+    meta_init.connectivity.common.rc \
+    meta_init.connectivity.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
+    meta_init.vendor.rc \
+    multi_init.rc \
+
+    
 
 # Fastboot
 PRODUCT_PACKAGES += \
