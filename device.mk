@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Dalvik VM Configuration
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -222,7 +222,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.spaced
+    android.hardware.light-service.x6827
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -230,7 +230,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service-spaced
+    vendor.lineage.livedisplay@2.1-service-x6827
 
 # Vendor Log Tag
 include $(LOCAL_PATH)/vendor_logtag.mk
@@ -296,14 +296,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    FrameworksResOverlaySpaced \
-    SettingsOverlaySpaced \
-    SystemUIOverlaySpaced \
-    TelephonyOverlaySpaced \
-    WifiResOverlaySpaced \
-    TetheringResOverlaySpaced \
-    CarrierConfigOverlaySpaced \
-    OplusDozeOverlaySpaced
+    FrameworksResOverlayx6827 \
+    SettingsOverlayx6827 \
+    SystemUIOverlayx6827 \
+    TelephonyOverlayx6827 \
+    WifiResOverlayx6827 \
+    TetheringResOverlayx6827 \
+    CarrierConfigOverlayx6827 \
+    OplusDozeOverlayx6827
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -355,7 +355,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.spaced-libperfmgr \
+    android.hardware.power-service.x6827-libperfmgr \
     android.hardware.power@1.2.vendor \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub
 
@@ -420,7 +420,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1.vendor \
     android.frameworks.sensorservice@1.0 \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@2.0-service-multihal.spaced \
+    android.hardware.sensors@2.0-service-multihal.x6827 \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
@@ -488,4 +488,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/realme/spaced/spaced-vendor.mk)
+$(call inherit-product, vendor/infinix/x6827/x6827-vendor.mk)
